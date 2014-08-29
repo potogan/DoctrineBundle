@@ -1,0 +1,14 @@
+{
+    "name": "potogan/doctrine-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "popy-dev",
+            "email": "pierre.dudoret@potogan.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
