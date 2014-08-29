@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle\Detacher;
 
 interface DetachableEntityInterface

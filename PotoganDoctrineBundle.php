@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

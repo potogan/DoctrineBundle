@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle\Collections;
 
 use Doctrine\ORM\Mapping\ClassMetadata;

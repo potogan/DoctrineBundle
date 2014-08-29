@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle\Hydrators;
 
 use PDO;

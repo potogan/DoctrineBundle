@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle\EventListener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;

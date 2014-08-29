@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle\Query\Functions;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;

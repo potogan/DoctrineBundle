@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;

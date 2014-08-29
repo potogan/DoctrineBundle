@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle\Detacher;
 
 use Doctrine\Common\Collections\Collection;

@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\DoctrineBundle\Annotations;
 
 use Doctrine\ORM\Mapping\Annotation as AnnotationInterface;
