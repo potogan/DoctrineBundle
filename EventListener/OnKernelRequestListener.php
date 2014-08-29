@@ -9,18 +9,18 @@ use Symfony\Component\DependencyInjection\ContainerAware;
  */
 class OnKernelRequestListener extends ContainerAware
 {
-	/**
-	 * Renders the template and initializes a new response object with the
-	 * rendered template content.
-	 *
-	 * @param GetResponseEvent $event A GetResponseEvent instance
-	 */
-	public function onKernelRequest(GetResponseEvent $event)
-	{
-		$config = $this->container->get('doctrine.orm.entity_manager')->getConfiguration();
+    /**
+     * Renders the template and initializes a new response object with the
+     * rendered template content.
+     *
+     * @param GetResponseEvent $event A GetResponseEvent instance
+     */
+    public function onKernelRequest(GetResponseEvent $event)
+    {
+        $config = $this->container->get('doctrine.orm.entity_manager')->getConfiguration();
 
-		$config->addCustomHydrationMode('entities', 'Potogan\\DoctrineBundle\\Hydrators\\MultipleEntitiesHydrator');
-		$config->addCustomStringFunction('IF', 'Potogan\\DoctrineBundle\\Query\\Functions\\MysqlIf');
-	}
+        $config->addCustomHydrationMode('entities', 'Potogan\\DoctrineBundle\\Hydrators\\MultipleEntitiesHydrator');
+        $config->addCustomStringFunction('IF', 'Potogan\\DoctrineBundle\\Query\\Functions\\MysqlIf');
+    }
 
 }

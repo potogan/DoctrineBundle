@@ -3,11 +3,8 @@ namespace Potogan\DoctrineBundle\Detacher;
 
 interface DetachableEntityInterface
 {
-	/**
-	 *
-	 *
-	 *
-	 * @return array<object>
-	 */
-	public function detachChildrenEntities();
+    /**
+     * @return array<object>
+     */
+    public function detachChildrenEntities();
 }

@@ -5,22 +5,22 @@ use Doctrine\Common\Collections\Collection;
 
 abstract class AbstractDetachableEntity implements DetachableEntityInterface
 {
-	protected function detachByProperties(array $properties)
-	{
-		$res = array();
+    protected function detachByProperties(array $properties)
+    {
+        $res = array();
 
-		foreach ($properties as $name) {
-			$val = $this->$name;
+        foreach ($properties as $name) {
+            $val = $this->$name;
 
-			if ($val instanceof Collection) {
-				$res = array_merge($res, $val->getValues());
-			} else {
-				$res[] = $val;
-			}
-			
-			$this->$name = null;
-		}
+            if ($val instanceof Collection) {
+                $res = array_merge($res, $val->getValues());
+            } else {
+                $res[] = $val;
+            }
 
-		return $res;
-	}
+            $this->$name = null;
+        }
+
+        return $res;
+    }
 }
