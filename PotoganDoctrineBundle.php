@@ -13,5 +13,7 @@ class PotoganDoctrineBundle extends Bundle
         $config->addCustomHydrationMode('entities', 'Potogan\\DoctrineBundle\\Hydrators\\MultipleEntitiesHydrator');
         $config->addCustomStringFunction('IF', 'Potogan\\DoctrineBundle\\Query\\Functions\\Mysql\\MysqlIf');
         $config->addCustomStringFunction('FIND_IN_SET', 'Potogan\\DoctrineBundle\\Query\\Functions\\Mysql\\FindInSet');
+        $config->addCustomStringFunction('GROUP_BIT_OR', 'Potogan\\DoctrineBundle\\Query\\Functions\\Mysql\\BitOrGrouping');
+        $config->addCustomStringFunction('GROUP_BIT_AND', 'Potogan\\DoctrineBundle\\Query\\Functions\\Mysql\\BitAndGrouping');
     }
 }
