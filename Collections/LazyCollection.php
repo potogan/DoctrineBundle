@@ -4,6 +4,10 @@ namespace Potogan\DoctrineBundle\Collections;
 
 use Doctrine\ORM\Query;
 
+/**
+ * LazyCollection : this collection is an abstraction of a Query, and will execute this query only
+ *     once, and only when needed
+ */
 class LazyCollection extends AbstractInitializableCollection
 {
     /**

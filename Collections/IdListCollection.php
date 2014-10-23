@@ -6,6 +6,10 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMException;
 use Doctrine\ORM\Mapping\ClassMetadata;
 
+/**
+ * IdListCollection : this collection fetches some entities based on their ids given as an id
+ *     list
+ */
 class IdListCollection extends AbstractInitializableCollection
 {
     /**
@@ -83,6 +87,16 @@ class IdListCollection extends AbstractInitializableCollection
         $this->initialized = true;
     }
 
+    /**
+     * Checks composite id definitions and sort them by definition order
+     * 
+     * @param  ClassMetadata $class Entity-Class metadata
+     * @param  array         $id    composite id
+     * 
+     * @return array                sorted composite id
+     *
+     * @throws  ORMException If the id is invalid
+     */
     protected function checkAndSortCompositeId(ClassMetadata $class, $id)
     {
         $sortedId = array();
