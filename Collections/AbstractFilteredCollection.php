@@ -20,6 +20,7 @@ abstract class AbstractFilteredCollection extends AbstractInitializableCollectio
     {
         if (!$this->initialized) {
             $this->initialized = true;
+            $this->_elements = array();
 
             foreach ($this->internal as $elm) {
                 if ($this->filterElement($elm)) {
