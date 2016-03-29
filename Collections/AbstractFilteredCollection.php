@@ -24,7 +24,7 @@ abstract class AbstractFilteredCollection extends AbstractInitializableCollectio
 
             foreach ($this->internal as $elm) {
                 if ($this->filterElement($elm)) {
-                    $this->add($elm);
+                    $this->_elements[] = $elm;
                 }
             }
         }
