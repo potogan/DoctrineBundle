@@ -1,12 +1,12 @@
 services:
     potogan_doctrine.detacher:
         class: Potogan\DoctrineBundle\Detacher\Detacher
-        arguments: [ @doctrine.orm.default_entity_manager ]
+        arguments: [ "@doctrine.orm.default_entity_manager" ]
 
     potogan_doctrine.EntityLifeCycleListener:
         class: Potogan\DoctrineBundle\EventListener\EntityLifeCycleListener
         arguments:
-            - @annotation_reader
+            - "@annotation_reader"
         tags:
             - { name: doctrine.event_listener, event: postLoad }
             - { name: doctrine.event_listener, event: postPersist }
